@@ -1,0 +1,181 @@
+.product-item{
+    background: $white;
+    border-radius: 16px;
+    position: relative;
+    margin-right: 10px;
+    border: 3px solid transparent;
+    @include transition(all 0.4s ease-in-out);
+    & .content{
+        padding: 24px;
+        background: $white;
+        border-radius: 16px;
+        position: relative;
+        z-index: 9;
+    }
+    & .img{
+        position: relative;
+        overflow: hidden;
+        border-radius: 16px;
+        & .img-show{
+            & img:first-child{
+                opacity: 1;
+                visibility: visible;
+            }
+            & img:last-child{
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+        & img{
+            opacity: 0;
+            visibility: hidden;
+            transition: all .8s cubic-bezier(.25,.46,.45,.94) 0s;
+            border-radius: 16px;
+            &.active{
+                opacity: 1;
+                visibility:visible;
+                transform: scale(1.1);
+            }
+        }
+        &:hover{
+            & img{
+                transform: scale(1.1);
+            }
+            & .img-show{
+                & img:first-child{
+                    opacity: 0;
+                    visibility: hidden;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                & img:last-child{
+                    opacity: 1;
+                    visibility: visible;
+                    position: initial;
+                }
+            }
+        }
+    }
+    & .desc{
+        & h3{
+            font-weight: bold;
+            padding-top: 12px;
+            padding-bottom: 5px;
+            font-family: $font-Product;
+            display: -webkit-inline-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        & .price{
+            font-family: $font-Product;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 24px;
+            color: $blue-bg;
+            opacity: 0.8;
+            margin-bottom: 8px;
+        }
+        & .category{
+            margin-bottom: 16px;
+            & span{
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                margin-right: 8px;
+                cursor: pointer;
+                &:hover{
+                    @include transition(all 0.4s ease);
+                    // box-shadow: 0 0 11px 2px #ef9cd6;
+                    
+                }
+                &:last-child{
+                    margin-right: 0;
+                }
+                &.pink{
+                    background: $pink2;
+                    &:hover{
+                        box-shadow: 0 0 11px 2px $pink2;
+                    }
+                }
+                &.blue{
+                    background: $blue;
+                    &:hover{
+                        box-shadow: 0 0 11px 2px $blue
+                    }
+                }
+                &.yellow{
+                    background: $yellow;
+                    &:hover{
+                        box-shadow: 0 0 11px 2px $yellow;
+                    }
+                }
+                &.white{
+                    background: #f2eded;
+                    &:hover{
+                        box-shadow: 0 0 11px 2px #f2eded;
+                    }
+                }
+            }
+        }
+    }
+    & .button{
+        max-height: 0;
+        overflow: hidden;
+       @include transition(all 0.4s ease-in-out);
+    }
+    & .intersect{
+        transition: all .8s cubic-bezier(.25,.46,.45,.94) 0s;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        z-index: 8;
+        opacity: 0;
+        visibility: hidden;
+    }
+    &:hover{
+        border-color: $yellow-bg;
+        & .intersect{
+            top: -10px;
+            right:-10px;
+            opacity: 1;
+            visibility: visible;
+        }
+        & .button{
+            max-height: 100vh;
+        }
+    }
+    @include tablet{
+        & .content{
+            padding: 10px;
+        }
+    }
+    @include mobile{
+        margin-right: 8px;
+        &:hover{
+            border-color: transparent;
+        }
+        & .content{
+            padding: 4px;
+        }
+        & .desc{
+            padding: 0 4px;
+            & h3{
+                padding-top: 9px;
+            }
+        }
+        &:hover{
+            & .button{
+                padding: 10px;
+            }
+        }
+        & .intersect{
+            display: none;
+        }
+    }
+}

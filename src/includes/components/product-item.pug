@@ -1,0 +1,20 @@
+mixin product-item(img1,img2,h3,price)
+    .product-item
+        .content
+            .img
+                .img-show
+                    img(src=img1, alt="show1")
+                    img(src=img2, alt="sho2")
+            .desc 
+                h3=h3
+                p.price=price
+                .category 
+                    span.pink(data-img="img3.jpg")
+                    span.blue(data-img="img4.jpg")
+                    span.yellow(data-img="img5.jpg")
+                    span.white(data-img="img7.jpg")
+            .button
+                a(href="").btn.btn-buy Mua ngay
+        .intersect
+            img(src="assets/images/tersect2.png", alt="")
+                

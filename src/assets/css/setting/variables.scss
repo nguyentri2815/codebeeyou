@@ -1,0 +1,69 @@
+
+
+// global variable css
+$white: #fff;
+$black: #767676;
+$blue-bg:#009EFE;
+$yellow-bg:#FBCA16;
+$pink:#FCD4D4;
+$pink2:#EF9CD6;
+$blue:#85CEF2;
+$yellow:#F4EA88;
+$yellow2:#FFC800;
+
+// Fonts
+$font-roboto: "Roboto";
+$font-Product: 'Product Sans';
+
+// Border radius
+$img-radius: 5px;
+$border-radius-form: 10px;
+
+//========mixin=============
+//text
+
+/*primary colors*/
+$white-cl: #fff;
+$black-cl: #000;
+
+/*global text color*/
+$text-color: #222;
+$text-black-cl: #000;
+
+/*global bg color*/
+$main-bg-cl: #F4F4F4;
+$black-bg-cl: #000;
+
+// time transition
+$t: 0.4s;
+$cubic: cubic-bezier(0.84, 0.13, 0.33, 0.97);
+
+/*font families*/
+$font-stack: "Open Sans", sans-serif;
+$font-family:"Open Sans", sans-serif;
+/*headings typo*/
+$fz-text: 16px;
+$lh-text: normal;
+$font-size:16px;
+$text-transform:initial;
+$fz-text-m: 16px;
+$lh-text-m: normal;
+
+/*GRID - media queries breakpoints*/
+$xxs-min: 340px;
+$xs-min: 768px;
+$sm-min: 992px;
+$md-min: 1200px;
+$lg-min: 1600px;
+
+$xxs-max: ($xxs-min - 1);
+$xs-max: ($xs-min - 1);
+$sm-max: ($sm-min - 1);
+$md-max: ($md-min - 1);
+$lg-max: ($lg-min - 1);
+
+/*BOXED LAYOUT*/
+$max-width: 1920px;
+$container-max-width: $max-width;
+$container-width: 1260px;
+

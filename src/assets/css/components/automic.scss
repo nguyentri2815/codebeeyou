@@ -1,0 +1,47 @@
+.title{
+    font-family: $font-Product;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 1.5;
+    color: $black-cl;
+    margin-bottom: 5px;
+    & + p{
+        max-width: 50%;
+    }
+    @include maxW(1200px){
+        font-size: 35px;
+    }
+    @include tablet{
+        font-size: 30px;
+        & + p{
+            max-width: 100%;
+        }
+    }
+    @include mobile{
+        font-size: 24px;
+        & + p{
+            max-width: 100%;
+        }
+    }
+}
+.btn{
+    display: inline-block;
+    background: $yellow2;
+    border-radius: 12px;
+    font-family: $font-Product;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1;
+    padding: 8px 30px;
+    @include transition(0.4s ease-in-out);
+    &:hover{
+        background: #ee9507;
+    }
+    &-buy{
+        display: block;
+        text-align: center;
+    }
+    @include mobile{
+        padding: 8px 15px;
+    }
+}

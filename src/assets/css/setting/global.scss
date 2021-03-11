@@ -1,0 +1,58 @@
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    box-sizing: border-box;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+html,
+body {
+    width: 100%;
+    max-width: $max-width;
+    -webkit-font-smoothing: antialiased;
+    margin: auto;
+    font-size: 16px;
+    line-height: 1.5;
+    color: $black-cl;
+    font-style: normal;
+    font-weight: normal;
+    font-family: $font-roboto;
+    background: $main-bg-cl;
+    position: relative;
+    
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: $container-width;
+  }
+}
+  
+  .container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .wrapper{
+    overflow: hidden;
+  }
+  .owl-dots{
+    margin-top: 25px!important;
+    
+  }
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+		.owl-dots{
+      margin-top: 12px!important;
+      
+    }
+	}
+  .owl-dot.active{
+    & span{
+      background: $yellow2!important;
+    }
+  }

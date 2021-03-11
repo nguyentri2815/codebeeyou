@@ -1,0 +1,7 @@
+/node_modules/
+# /src/*.html
+# /src/assets/css/main.css
+.DS_Store
+.idea/*
+yarn.lock
+debug.log
